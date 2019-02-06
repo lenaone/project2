@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+
+  <%if logged_in?%>
+    logged in "<%= current_user.name %>"
+    <form action="/session" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>delete</button>
+    </form>
+  <%else%>
+
+  <%end%>
+
+  <%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<a href="/products/new">new products list</a>
+
+<a href="/my_products">my products</a>
+
+<h2>products List</h2>
+
+
+
+<%@products.each do |product|%>
+    <a href="/products/<%= product.id %>">
+        <p><img src="<%= product.image_url %>"></p>
+        <p><%= product.name %></p>
+        <p><%= product.price %></p>
+        
+    </a>
+<%end%>
+

@@ -1,0 +1,45 @@
+<h2>Shoes detail</h2>
+
+    <p> //image// </p>
+    <p><img src="<%= @product.image_url%>"></p>
+
+    <p> //name// </p>
+   <p><%= @product.name%></p>
+
+    <p>//price//</p>
+   <p><%= @product.price%></p>
+
+    <form action="/products/<%= @product.id%>" method="post">
+
+        <input type="hidden" name="_method" value="delete">
+        <button>delete</button>
+    
+    </form>
+
+   <a href="/products/<%= @product.id %>/edit">edit</a>
+
+
+<h3>Reviews</h3>
+
+
+<h3>WRITE REVIEW</h3>
+
+
+
+<form action="/reviews" method="post">
+
+<input type="hidden" name="property_id" value="<%=@product.id%>">
+
+    <label for="">star_ratings</label>
+    <input name="star_ratings" type="text">
+
+    <label for="">description</label>
+    <textarea name="description"></textarea>
+
+<button>post</button>
+</form>
+
+<% @reviews.each do |review|%>
+    <p><%= review.star_rating %></p>
+    <p><%= review.description %></p>
+<%end%>

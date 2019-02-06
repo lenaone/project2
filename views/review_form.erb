@@ -1,0 +1,6 @@
+<h3>Review</h3>
+
+<% @reviews.each do |review|%>
+    <p><%= review.star_rating %></p>
+    <p><%= review.description %></p>
+<%end%>
