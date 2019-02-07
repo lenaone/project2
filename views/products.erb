@@ -1,17 +1,38 @@
-<a href="/products/new">new products list</a>
 
-<a href="/my_products">my products</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/products.css"> 
+</head>
+<body>
 
-<h2>products List</h2>
 
 
+    <a href="/products/new">new products list</a>
 
-<%@products.each do |product|%>
-    <a href="/products/<%= product.id %>">
-        <p><img src="<%= product.image_url %>"></p>
-        <p><%= product.name %></p>
-        <p><%= product.price %></p>
-        
-    </a>
-<%end%>
+    <a href="/my_products">my products</a>
+
+    <h2>products List</h2>
+
+    <div class="list">
+
+    <%@products.each do |product|%>
+        <a class="products" href="/products/<%= product.id %>">
+            <p><img src="<%= product.image_url %>"></p>
+            <p><%= product.name %></p>
+            <p><%= product.price %></p>
+            
+        </a>
+    <%end%>
+
+    </div>
+
+    
+</body>
+</html>
+
 

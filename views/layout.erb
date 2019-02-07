@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World</title>
-  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
 </head>
 <body>
 
+  <div class="align">
   <%if logged_in?%>
-    logged in "<%= current_user.name %>"
     <form action="/session" method="post">
     <input type="hidden" name="_method" value="delete">
-    <button>delete</button>
+    logged in "<%= current_user.name %>"
+    <button>log out</button>
     </form>
   <%else%>
 
   <%end%>
+  </div>
 
   <%= yield %>
 

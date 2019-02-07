@@ -1,45 +1,73 @@
-<h2>Shoes detail</h2>
+<link rel="stylesheet" href="/stylesheets/product_detail.css">
 
-    <p> //image// </p>
-    <p><img src="<%= @product.image_url%>"></p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+</style>
 
-    <p> //name// </p>
-   <p><%= @product.name%></p>
+    <div>
 
-    <p>//price//</p>
-   <p><%= @product.price%></p>
+        <h2>Shoes detail</h2>
 
-    <form action="/products/<%= @product.id%>" method="post">
+        <h4><strong> name </strong></h4>
+            <p><%= @product.name%></p>
 
-        <input type="hidden" name="_method" value="delete">
-        <button>delete</button>
-    
-    </form>
+        <h4><strong> image </strong></h4>
+            <p><img src="<%= @product.image_url%>"></p>
 
-   <a href="/products/<%= @product.id %>/edit">edit</a>
+        <h4><strong> price </strong></h4>
+        <p><%= @product.price%></p>
+
+        <a  class="btn btn-info" href="/products/<%= @product.id %>/edit" style="margin: 0 0 20px 0;">edit</a>
+
+        <form action="/products/<%= @product.id%>" method="post">
+
+            <input type="hidden" name="_method" value="delete">
+            <button class="btn btn-danger">delete</button>
+
+        </form>
 
 
-<h3>Reviews</h3>
 
 
-<h3>WRITE REVIEW</h3>
+        <h2>Reviews</h2>
+        
+
+        <% @reviews.each do |review|%>
+        <p><strong>Name:</strong> <%= User.find(review.user_id).name %></p>
+        <p><strong>Star-ratings:</strong>  
+            <% review.star_rating.times do %>
+                <%= '<span class="fa fa-star checked"></span>' %>
+            <%end%>
+        </p>
+        <p><strong>Description:</strong> <%= review.description %></p>
+        <%end%>
+
+        <h2>WRITE REVIEW</h2>
+
+        <form action="/reviews" method="post">
+
+        <input type="hidden" name="product_id" value="<%=@product.id%>">
+
+        <div class="container">
+        <label for="">star_ratings</label>
+        <input style="margin: 0 40%; width: 20%;"class="form-control mb-4" name="star_rating" type="text">
+        </div>
+
+        <div class="description_container">
+            <div class="form-group shadow-textarea" >
+            <label for="">description</label>
+            <textarea class="form-control z-depth-1"  rows="3" placeholder="Write something here..." name="description"></textarea>
+            </div>
+        </div>
+
+        <button class="btn btn-info">post</button>
+        </form>
+
+    </div>
 
 
 
-<form action="/reviews" method="post">
 
-<input type="hidden" name="property_id" value="<%=@product.id%>">
-
-    <label for="">star_ratings</label>
-    <input name="star_ratings" type="text">
-
-    <label for="">description</label>
-    <textarea name="description"></textarea>
-
-<button>post</button>
-</form>
-
-<% @reviews.each do |review|%>
-    <p><%= review.star_rating %></p>
-    <p><%= review.description %></p>
-<%end%>

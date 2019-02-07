@@ -1,0 +1,9 @@
+body {
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    font-family: 'Niramit', sans-serif;
+}
+
+.align {
+    text-align: right;
+}
+

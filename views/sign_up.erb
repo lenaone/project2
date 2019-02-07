@@ -1,19 +1,26 @@
-<h3>SIGN UP</h3>
+<link rel="stylesheet" href="/stylesheets/input_form.css">
 
-<form action="/sign_up" method="post">
+<div>
 
-    <%# <input type="hidden" method="_method" value="put"> %>
+    <form action="/sign_up" class="text-center border border-light p-5" method="post">
 
-    <label for="">name</label>
-    <input type="text" name="name">
+        <div class="container">
 
-    <label for="">email</label>
-    <input type="text" name="email">
+            <p class="h4 mb-4" style="font-size: 30px; margin: 20px;">Sign up</p>
 
-    <label for="">password</label>
-    <input type="password" name="password">
+            <label for="">name</label>
+            <input type="text" name="name" class="form-control" placeholder="name">
 
-    <button>sign up</button>
+            <label for="">E-mail</label>
+            <input type="text" name="email" class="form-control" placeholder="E-mail">
 
+            <label for="">password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password">
 
-</form>
+            <button class="btn btn-info my-4 btn-block" type="submit">sign up</button>
+
+        </div>
+
+    </form>
+
+</div>

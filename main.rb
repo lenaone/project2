@@ -31,7 +31,7 @@ helpers do # this sinatra working as erb files and rb file.
 end
 
 get '/' do
-  erb :index
+  redirect '/login'
 end
 
 
@@ -57,8 +57,8 @@ end
 
 get '/products/:id' do
   @product = Product.find(params[:id])
+  @reviews = Review.where(product_id: params[:id])
 
-  @reviews = Review.all
   erb :products_detail
   
 end
@@ -75,8 +75,6 @@ put '/products/:id' do
   product.price = params[:price]
   product.user_id = session[:user_id]
   product.save
-
-  
 
   redirect "/products/#{product.id}"
 end
@@ -138,9 +136,10 @@ post '/reviews' do
   review.star_rating = params[:star_rating]
   review.description = params[:description]
   review.user_id = session[:user_id]
-  review.products_id = Product.find(params[:id]).id
+  review.product_id = params[:product_id]
   review.save
-  redirect "/products/#{product.id}"
+
+  redirect "/products/#{params[:product_id]}"
 end
 
 get '/reviews' do
