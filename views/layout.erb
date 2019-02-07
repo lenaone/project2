@@ -9,13 +9,15 @@
   <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
 </head>
 <body>
-
+  
+  <h2 style="text-align: center;"> Product Review </h2>
+  
   <div class="align">
   <%if logged_in?%>
     <form action="/session" method="post">
     <input type="hidden" name="_method" value="delete">
     logged in "<%= current_user.name %>"
-    <button>log out</button>
+    <button class="btn btn-info" style="margin: 0;">log out</button>
     </form>
   <%else%>
 
