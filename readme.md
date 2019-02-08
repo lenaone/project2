@@ -16,5 +16,7 @@ My project title is product reviews. This website when user want to buy somethin
 
 
 ## Credit
-I use shein and fila website images.
-But, this website from school project. It's not make any profit of this.
+I use shein and fila website of images.
+But, this website from school project. So, this is not make any profit.
+
+
