@@ -15,4 +15,6 @@ My project title is product reviews. This website when user want to buy somethin
 5.  Check the Creation of users, products, reviews in database.
 
 
-## 
+## Credit
+I use shein and fila website images.
+But, this website from school project. It's not make any profit of this.
