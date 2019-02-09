@@ -1,10 +1,10 @@
 
-## This is my website!!
+## This is project reviews app.
    Click [here](https://radiant-escarpment-66673.herokuapp.com/login)
 
 ## Explanation
 
-My project title is product reviews. This website when user want to buy something, they search the reviews so, they can dedcide to buy or not and they can see lots of users reviews. So, it's really helpful for users. Also, they can upload their products as well. It's really useful for users. 
+My project title is product reviews. This website when user want to buy something,they search the reviews so, they can dedcide to buy or not and they can see lots of users reviews. So, it's really helpful for users. Also, they can upload their products as well. It's really useful for users. 
 
 ## Approach
 
@@ -14,9 +14,20 @@ My project title is product reviews. This website when user want to buy somethin
 4.  Create models, active record and each pages on website.
 5.  Check the Creation of users, products, reviews in database.
 
+## Language & Framework
+
+* Ruby
+* Sinatra
+* postgresql
+* activerecord
+* html & css
+
+## Deploy
+
+* Deployed online on Heroku.
 
 ## Credit
-I use shein and fila website of images.
-But, this website from school project. So, this is not make any profit.
+I use Unsplash of images.
+This website from school project. So, It's not intended to make any profit.
 
 
