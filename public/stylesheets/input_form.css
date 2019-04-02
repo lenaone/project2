@@ -8,9 +8,10 @@ div {
     border-radius: 2px;
 }
 
-
 button {
     margin: 20px 0;
 }
 
-
+.signupform-detail {
+    margin-top: 10px;
+}

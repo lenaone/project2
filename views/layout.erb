@@ -31,7 +31,7 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" action="/session" method="post">
-        <span>Hello "<%= current_user.name %>"</span>
+        <span class="nav-link">Hello "<%= current_user.name %>"</span>
         <input class="form-control mr-sm-2" type="hidden" name="_method" value="delete">
         <button class="btn btn-info" type="submit">Logout</button>
       </form>

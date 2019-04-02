@@ -4,7 +4,7 @@
 <div class="product-info">
     <div class="card">
         <div class="card-body">
-        <h2>Product detail</h2>
+        <h2 class="bold">Product detail</h2>
         <h4 class="bold">name</h4>
             <p><%= @product.name%></p>
         <h4 class="bold">image</h4>
@@ -22,7 +22,7 @@
 
         <div class="card">
             <div class="card-body">
-                <h2>Reviews</h2>
+                <h2 class="bold">Reviews</h2>
                 <% @reviews.each do |review|%>
                 <p class="bold">Name: <%= User.find(review.user_id).name %></p>
                 <p class="bold">Star-ratings: 
@@ -36,7 +36,7 @@
                 <p class="bold">Description: <%= review.description %></p>
                 <%end%>
         
-                <h2>WRITE REVIEW</h2>
+                <h2 class="bold">WRITE REVIEW</h2>
                 <form action="/reviews" method="post">
                 <input type="hidden" name="product_id" value="<%=@product.id%>">
                 <div class="container">

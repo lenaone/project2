@@ -40,3 +40,9 @@ img {
 .each-product {
     margin-right: 20px;
 }
+
+#bold {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
