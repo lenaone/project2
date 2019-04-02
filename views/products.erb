@@ -11,10 +11,10 @@
 <body>
   <h2>products List</h2>
   <div class="list">
-  <%@products.each do |product|%>
+  <% @products.each do |product| %>
     <a class="products" href="/products/<%= product.id %>">
       <p><img src="<%= product.image_url %>"></p>
-      <p><%= product.name %></p>
+      <p class="product-name"><%= product.name %></p>
     </a>
   <%end%>
   </div>

@@ -1,6 +1,10 @@
-<h3>my products list</h3>
+<h3>Products list</h3>
 
-<%@products.each do |product|%>
-    <p> <%=product.name%> </p>
-    <p> <img src="<%=product.image_url%>"> </p>
-<%end%>
+<div class="wrap">
+    <%@products.each do |product|%>
+        <div class="each-product">
+        <p><%=product.name%></p>
+        <a href="/products/<%= product.id %>"><img src="<%=product.image_url%>"></a>
+        </div>
+    <%end%>
+</div>

@@ -2,7 +2,7 @@ body {
     /* background: linear-gradient(to right, #ffafbd, #ffc3a0); */
     background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('../images/imani-clovis-547617-unsplash.jpg');
     background-size: cover;
-    font-family: 'Niramit', sans-serif;
+    font-family: 'Old Standard TT', serif;
 }
 
 .align {
@@ -14,14 +14,29 @@ img {
     height:200px;
 }
 
-.products {
-    margin: 0 10px;
-}
-
 .nav-link {
     color: rgba(255,255,255,.5);
 }
 
 .fas {
     color: yellow;
+}
+
+.product-name {
+    color: black;
+}
+
+.product-name:hover {
+    text-decoration: none;
+}
+
+.wrap {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.each-product {
+    margin-right: 20px;
 }

@@ -32,6 +32,11 @@ end
 
 get '/' do
   redirect '/login'
+
+def active_page?(path='')
+  request.path_info == '/' + path
+end
+
 end
 
 
@@ -50,7 +55,7 @@ post '/products' do
   product.image_url = params[:image_url]
   product.user_id = session[:user_id]
   product.save
-
+  @action = 'products'
   redirect '/products'
 end
 

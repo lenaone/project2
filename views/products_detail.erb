@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="/stylesheets/product_detail.css">
 <a href="/products" class="btn btn-info"> << Back</a>
-    <div>
 
+<div class="product-info">
+    <div class="card">
+        <div class="card-body">
         <h2>Product detail</h2>
-
-        <h4><strong> name </strong></h4>
+        <h4 class="bold">name</h4>
             <p><%= @product.name%></p>
-
-        <h4><strong> image </strong></h4>
+        <h4 class="bold">image</h4>
             <p><img src="<%= @product.image_url%>"></p>
 
         <div class="oneline-editbtn-deletebtn"> 
@@ -15,46 +15,46 @@
         <form action="/products/<%= @product.id%>" method="post">
             <input type="hidden" name="_method" value="delete">
             <button class="btn btn-danger">delete</button>
-        </div>
-
         </form>
-
-        <h2>Reviews</h2>
-        
-        <% @reviews.each do |review|%>
-        <p><strong>Name:</strong> <%= User.find(review.user_id).name %></p>
-        <p><strong>Star-ratings:</strong>  
-            <% review.star_rating.times do %>
-                <i class="fas fa-star"></i>
-            <% end %>
-                <% (5- review.star_rating).times do %>
-                <i class="far fa-star"></i>
-            <%end%>
-        </p>
-        <p><strong>Description:</strong> <%= review.description %></p>
-        <%end%>
-
-        <h2>WRITE REVIEW</h2>
-
-        <form action="/reviews" method="post">
-        <input type="hidden" name="product_id" value="<%=@product.id%>">
-
-        <div class="container">
-        <label for="">star_ratings</label>
-        <input style="margin: 0 40%; width: 20%;"class="form-control mb-4" name="star_rating" placeholder="1-5" type="text">
         </div>
+        </div>
+    </div>
 
-        <div class="description_container">
-            <div class="form-group shadow-textarea" >
-            <label for="">description</label>
-            <textarea class="form-control z-depth-1"  rows="3" placeholder="Write something here..." name="description"></textarea>
+        <div class="card">
+            <div class="card-body">
+                <h2>Reviews</h2>
+                <% @reviews.each do |review|%>
+                <p class="bold">Name: <%= User.find(review.user_id).name %></p>
+                <p class="bold">Star-ratings: 
+                <% review.star_rating.times do %>
+                    <i class="fas fa-star"></i>
+                <% end %>
+                    <% (5- review.star_rating).times do %>
+                    <i class="far fa-star"></i>
+                <%end%>
+                </p>
+                <p class="bold">Description: <%= review.description %></p>
+                <%end%>
+        
+                <h2>WRITE REVIEW</h2>
+                <form action="/reviews" method="post">
+                <input type="hidden" name="product_id" value="<%=@product.id%>">
+                <div class="container">
+                <label for="">star_ratings</label>
+                <input style="margin: 0 40%; width: 20%;"class="form-control mb-4" name="star_rating" placeholder="1-5" type="text">
+                </div>
+                <div class="description_container">
+                    <div class="form-group shadow-textarea" >
+                    <label>description</label>
+                    <textarea class="form-control z-depth-1"  rows="3" placeholder="Write something here..." name="description"></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-info">post</button>
+                </form>
             </div>
         </div>
 
-        <button class="btn btn-info">post</button>
-        </form>
-
-    </div>
+</div>
 
 
 
