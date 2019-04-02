@@ -1,16 +1,5 @@
 <link rel="stylesheet" href="/stylesheets/product_detail.css">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.checked {
-  color: orange;
-}
-</style>
-
-<a href="/products" class="btn btn-outline-info"> << Back</a>
-
-
+<a href="/products" class="btn btn-info"> << Back</a>
     <div>
 
         <h2>Product detail</h2>
@@ -20,12 +9,13 @@
 
         <h4><strong> image </strong></h4>
             <p><img src="<%= @product.image_url%>"></p>
-        <a  class="btn btn-info" href="/products/<%= @product.id %>/edit" style="margin: 0 0 20px 0;">edit</a>
 
+        <div class="oneline-editbtn-deletebtn"> 
+        <a  id="edit-btn" class="btn btn-info" href="/products/<%= @product.id %>/edit">edit</a>
         <form action="/products/<%= @product.id%>" method="post">
-
             <input type="hidden" name="_method" value="delete">
             <button class="btn btn-danger">delete</button>
+        </div>
 
         </form>
 

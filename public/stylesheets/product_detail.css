@@ -18,3 +18,12 @@ div {
     margin: 0 auto;
     width: 300px;
 }
+
+.oneline-editbtn-deletebtn {
+    display: flex;
+    justify-content: center;
+}
+
+#edit-btn {
+    margin-right: 10px;
+}
