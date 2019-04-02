@@ -1,24 +1,14 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/products.css"> 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/products.css"> 
-</head>
-<body>
-  <h2 id="bold">products List</h2>
-  <div class="list">
-  <% @products.each do |product| %>
-    <a class="products" href="/products/<%= product.id %>">
-      <p><img src="<%= product.image_url %>"></p>
-      <p class="product-name"><%= product.name %></p>
-    </a>
-  <%end%>
-  </div>
-</body>
-</html>
+<h2 id="bold">Product list</h2>
+<div class="list">
+<% @products.each do |product| %>
+  <a class="products" href="/products/<%= product.id %>">
+    <p><img src="<%= product.image_url %>"></p>
+    <p class="product-name"><%= product.name %></p>
+  </a>
+<%end%>
+</div>
+
 
 

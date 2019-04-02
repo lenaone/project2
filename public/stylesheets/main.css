@@ -9,6 +9,10 @@ body {
     text-align: right;
 }
 
+nav {
+    height: 56px;
+}
+
 img {
     width:250px;
     height:200px;
@@ -43,6 +47,7 @@ img {
 
 #bold {
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
+    text-align: center;
 }
