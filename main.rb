@@ -48,7 +48,6 @@ post '/products' do
   product = Product.new
   product.name = params[:name]
   product.image_url = params[:image_url]
-  product.price = params[:price]
   product.user_id = session[:user_id]
   product.save
 
@@ -58,7 +57,6 @@ end
 get '/products/:id' do
   @product = Product.find(params[:id])
   @reviews = Review.where(product_id: params[:id])
-
   erb :products_detail
   
 end
@@ -72,7 +70,6 @@ put '/products/:id' do
   product = Product.find(params[:id])
   product.name = params[:name]
   product.image_url = params[:image_url]
-  product.price = params[:price]
   product.user_id = session[:user_id]
   product.save
 

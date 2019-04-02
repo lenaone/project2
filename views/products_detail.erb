@@ -13,17 +13,13 @@
 
     <div>
 
-        <h2>Shoes detail</h2>
+        <h2>Product detail</h2>
 
         <h4><strong> name </strong></h4>
             <p><%= @product.name%></p>
 
         <h4><strong> image </strong></h4>
             <p><img src="<%= @product.image_url%>"></p>
-
-        <h4><strong> price </strong></h4>
-        <p><%= @product.price%></p>
-
         <a  class="btn btn-info" href="/products/<%= @product.id %>/edit" style="margin: 0 0 20px 0;">edit</a>
 
         <form action="/products/<%= @product.id%>" method="post">
@@ -33,17 +29,16 @@
 
         </form>
 
-
-
-
         <h2>Reviews</h2>
         
-
         <% @reviews.each do |review|%>
         <p><strong>Name:</strong> <%= User.find(review.user_id).name %></p>
         <p><strong>Star-ratings:</strong>  
             <% review.star_rating.times do %>
-                <%= '<span class="fa fa-star checked"></span>' %>
+                <i class="fas fa-star"></i>
+            <% end %>
+                <% (5- review.star_rating).times do %>
+                <i class="far fa-star"></i>
             <%end%>
         </p>
         <p><strong>Description:</strong> <%= review.description %></p>
@@ -52,12 +47,11 @@
         <h2>WRITE REVIEW</h2>
 
         <form action="/reviews" method="post">
-
         <input type="hidden" name="product_id" value="<%=@product.id%>">
 
         <div class="container">
         <label for="">star_ratings</label>
-        <input style="margin: 0 40%; width: 20%;"class="form-control mb-4" name="star_rating" type="text">
+        <input style="margin: 0 40%; width: 20%;"class="form-control mb-4" name="star_rating" placeholder="1-5" type="text">
         </div>
 
         <div class="description_container">

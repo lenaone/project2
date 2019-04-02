@@ -1,20 +1,15 @@
-
-
 <form class="text-center border border-light p-5" action="/products/<%=@product.id%>" method="post">
-    <div class="container" style="width: 500px;">
-        <h2 class="h4 mb-4">Edit products list</h2>
+  <div class="container" style="width: 500px;">
+    <h2 class="h4 mb-4">Edit products list</h2>
 
-        <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="_method" value="put">
 
-        <label for="">name</label>
-        <input class="form-control" name="name" type="text" value="<%= @product.name %>" >
+    <label for="">name</label>
+    <input class="form-control" name="name" type="text" value="<%= @product.name %>" >
 
-        <label for="">image_url</label>
-        <input class="form-control" name="image_url" type="text" value="<%= @product.image_url %>" >
+    <label for="">image_url</label>
+    <input class="form-control" name="image_url" type="text" value="<%= @product.image_url %>" >
 
-        <label for="">price</label>
-        <input class="form-control" name="price" type="text" value="<%= @product.price %>" >
-
-        <button class="btn btn-info my-4 btn-block" type="submit" style="margin: 20px 0;">update</button>
-    </div>
+    <button class="btn btn-info my-4 btn-block" type="submit" style="margin: 20px 0;">update</button>
+  </div>
 </form>

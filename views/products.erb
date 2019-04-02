@@ -9,29 +9,15 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/products.css"> 
 </head>
 <body>
-
-
-
-    <a  class="btn btn-link" href="/products/new">new products list</a>
-
-    <a  class="btn btn-link" href="/my_products">my products</a>
-
-    <h2>products List</h2>
-
-    <div class="list">
-
-    <%@products.each do |product|%>
-        <a class="products" href="/products/<%= product.id %>">
-            <p><img src="<%= product.image_url %>"></p>
-            <p><%= product.name %></p>
-            <p><%= product.price %></p>
-            
-        </a>
-    <%end%>
-
-    </div>
-
-    
+  <h2>products List</h2>
+  <div class="list">
+  <%@products.each do |product|%>
+    <a class="products" href="/products/<%= product.id %>">
+      <p><img src="<%= product.image_url %>"></p>
+      <p><%= product.name %></p>
+    </a>
+  <%end%>
+  </div>
 </body>
 </html>
 

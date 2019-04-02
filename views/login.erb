@@ -1,56 +1,19 @@
 <link rel="stylesheet" href="/stylesheets/input_form.css">
 
 <div>
-    <form class="text-center border border-light p-5" action="/session" method="post">
-
+  <form class="text-center p-5" action="/session" method="post">
     <div class="container">
-        <p class="h4 mb-4" style="font-size: 30px; margin: 20px;" >Login</p>
+      <p class="h4 mb-4" style="font-size: 30px; margin: 20px;" >Login</p>
+      <label for="">email</label>
+      <input name="email" type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
 
-        <label for="">email</label>
-        <input name="email" type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+      <label for="">password</label>
+      <input name="password" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 
-        <label for="">password</label>
-        <input name="password" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-
-        
-        <button class="btn btn-info btn-block my-4 " type="submit">Sign in</button>
-
-        <p>Not a member?
-            <a href="/sign_up">Sign up</a>
-        </p>
-
+      <button class="btn btn-info btn-block my-4 " type="submit">Sign in</button>
+      <p>Not a member?
+          <a href="/sign_up">Sign up</a>
+      </p>
     </div>
-    </form>
-
+  </form>
 </div>
-
-<%# <form class="/session" method="post">
-
-    <p class="h4 mb-4">Sign in</p>
-
-    <input type="email" class="form-control mb-4" placeholder="E-mail">
-
-    <input type="password" name="password" class="form-control mb-4" placeholder="Password">
-
-    <div class="d-flex justify-content-around">
-        <div>
-            <!-- Remember me -->
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sign in button -->
-    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
-
-    <!-- Register -->
-    <p>Not a member?
-        <a href="">Register</a>
-    </p>
-
-    
-
-</form> %>
-<!-- Default form login -->

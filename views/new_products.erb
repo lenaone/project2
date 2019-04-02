@@ -2,27 +2,18 @@
 <link rel="stylesheet" href="/stylesheets/input_form.css">
 
 <div>
+    <form class="text-center p-5" action="/products" method="post">
 
+        <div class="container">
+            <h3 class="h4 mb-4" style="font-size: 30px; margin: 20px;">Detail</h3>
 
-<form class="text-center border border-light p-5" action="/products" method="post">
+            <label for="">name</label>
+            <input class="form-control mb-4" name="name" type="text">
 
-    <div class="container">
+            <label for="">image_url</label>
+            <input class="form-control mb-4" name="image_url" type="text">
 
-        <h3 class="h4 mb-4" style="font-size: 30px; margin: 20px;">shoes detail</h3>
-
-        <label for="">name</label>
-        <input class="form-control mb-4" name="name" type="text">
-
-        <label for="">image_url</label>
-        <input class="form-control mb-4" name="image_url" type="text">
-
-        <label for="">price</label>
-        <input class="form-control mb-4" name="price" type="text">
-
-        <button class="btn btn-info">submit</button>
-
-    </div>
-    
-</form>
-
+            <button class="btn btn-info">submit</button>
+        </div>
+    </form>
 </div>
