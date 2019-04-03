@@ -25,7 +25,7 @@
                 <h2 class="bold">Reviews</h2>
                 <% @reviews.each do |review|%>
                 <p class="bold">Name: <%= User.find(review.user_id).name %></p>
-                <p class="bold">Star-ratings: 
+                <p class="bold">Star ratings: 
                 <% review.star_rating.times do %>
                     <i class="fas fa-star"></i>
                 <% end %>
@@ -40,7 +40,7 @@
                 <form action="/reviews" method="post">
                 <input type="hidden" name="product_id" value="<%=@product.id%>">
                 <div class="container">
-                <label for="">star_ratings</label>
+                <label for="">Star ratings</label>
                 <input style="margin: 0 40%; width: 20%;"class="form-control mb-4" name="star_rating" placeholder="1-5" type="text">
                 </div>
                 <div class="description_container">
