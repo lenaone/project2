@@ -1,5 +1,5 @@
 
-## This is project reviews app.
+## This is product reviews app.
    Click [here](https://radiant-escarpment-66673.herokuapp.com/login)
 
 ## Explanation
